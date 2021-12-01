@@ -1,4 +1,4 @@
-######### This code is used for the descriptive analysis and graph making of the article Knocking on France's Door: ---- ###########
+######### This code was used for the descriptive analysis and graphs of the article Knocking on France's Door: ---- ###########
 
 # Loading packages
 
@@ -6,7 +6,7 @@ library(readr)
 library(openxlsx)
 library(tidyverse)
 
-                           ####### PART 1 ########
+                           ####### PART 1 #######
 
 
 # Loading dataset: migr_resvalid - All valid permits by reason, length of validity and citizenship 31 December of each year
