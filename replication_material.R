@@ -113,10 +113,6 @@ residence <- read_csv("C:/Users/letic/Desktop/Pesquisas/Knocking-on-France-s-doo
 ###### Asilo #######
 
 
-# Tranforming the column "sex" in the dataset "asilo" to character type.
-asilo <- asilo %>%  
-  mutate(sex = if_else(asilo$sex == TRUE, "T", "F", "M"))
-
 
 # Creating a column called "Continent", classifying all countries by their continent. (Learned by mistake that doing a join would be way easier).
 asilo <- asilo %>% 
@@ -485,8 +481,7 @@ ggplot(asilo_Africa_multi, aes(TIME_PERIOD, OBS_VALUE, fill = sex)) +
   theme_classic() +
   labs(x = "",
        y = "") + 
-  scale_fill_discrete(name = "", labels = c("M", "H")) +
-  ggtitle("África - Asilo")
+  scale_fill_discrete(name = "", labels = c("F", "M"))
 
 
 # Asia
@@ -500,8 +495,7 @@ ggplot(asilo_Asia_multi, aes(TIME_PERIOD, OBS_VALUE, fill = sex)) +
   theme_classic() +
   labs(x = "",
        y = "") + 
-  scale_fill_discrete(name = "", labels = c("M", "H")) +
-  ggtitle("Ásia - Asilo")
+  scale_fill_discrete(name = "", labels = c("F", "M"))
 
 
 # America
@@ -515,8 +509,7 @@ ggplot(asilo_America_multi, aes(TIME_PERIOD, OBS_VALUE, fill = sex)) +
   theme_classic() +
   labs(x = "",
        y = "") + 
-  scale_fill_discrete(name = "", labels = c("M", "H")) +
-  ggtitle("América - Asilo")
+  scale_fill_discrete(name = "", labels = c("F", "M"))
 
 
 # Stateless
@@ -573,8 +566,7 @@ ggplot(asilo_Magreb_multi, aes(TIME_PERIOD, OBS_VALUE, fill = sex)) +
   theme_classic() +
   labs(x = "",
        y = "") + 
-  scale_fill_discrete(name = "", labels = c("M", "H")) +
-  ggtitle("Magrebe - Asilo")
+  scale_fill_discrete(name = "", labels = c("F", "M"))
 
 
 ###################################################################################
@@ -852,8 +844,7 @@ ggplot(resettled_Africa_multi, aes(TIME_PERIOD, OBS_VALUE, fill = sex)) +
   theme_classic() +
   labs(x = "",
        y = "") + 
-  scale_fill_discrete(name = "", labels = c("M", "H")) +
-  ggtitle("África - Reassentamento")
+  scale_fill_discrete(name = "", labels = c("F", "M"))
 
 
 # Asia
@@ -867,8 +858,7 @@ ggplot(resettled_Asia_multi, aes(TIME_PERIOD, OBS_VALUE, fill = sex)) +
   theme_classic() +
   labs(x = "",
        y = "") + 
-  scale_fill_discrete(name = "", labels = c("M", "H")) +
-  ggtitle("Ásia - Reassentamento")
+  scale_fill_discrete(name = "", labels = c("F", "M"))
 
 
 # Total

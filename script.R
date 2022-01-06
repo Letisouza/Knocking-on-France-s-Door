@@ -11,10 +11,6 @@ resettled <- read_csv("C:/Users/letic/Desktop/Pesquisas/Knocking-on-France-s-doo
 
 library(tidyverse)
 
-# A variável sexo em asilo veio como lógico, então transformei em character.
-asilo <- asilo %>%  
-  mutate(sex = if_else(asilo$sex == TRUE, "T", "F", "M"))
-  
 
 # Criando variável de continente
 asilo <- asilo %>% 
@@ -838,6 +834,17 @@ ggplot(asilo_Africa_multi, aes(TIME_PERIOD, OBS_VALUE, fill = sex)) +
   scale_fill_discrete(name = "", labels = c("M", "H")) +
   ggtitle("África - Asilo")
 
+#ENGLISH
+
+ggplot(asilo_Africa_multi, aes(TIME_PERIOD, OBS_VALUE, fill = sex)) +
+  geom_col() +
+  facet_wrap(vars(age_fator)) +
+  theme_classic() +
+  labs(x = "",
+       y = "") + 
+  scale_fill_discrete(name = "", labels = c("F", "M"))
+
+
 ####
 
 asilo_Asia_multi <- asilo %>% 
@@ -852,6 +859,16 @@ ggplot(asilo_Asia_multi, aes(TIME_PERIOD, OBS_VALUE, fill = sex)) +
   scale_fill_discrete(name = "", labels = c("M", "H")) +
   ggtitle("Ásia - Asilo")
 
+# ENGLISH
+
+ggplot(asilo_Asia_multi, aes(TIME_PERIOD, OBS_VALUE, fill = sex)) +
+  geom_col() +
+  facet_wrap(vars(age_fator)) +
+  theme_classic() +
+  labs(x = "",
+       y = "") + 
+  scale_fill_discrete(name = "", labels = c("F", "M"))
+
 ####
 
 asilo_America_multi <- asilo %>% 
@@ -865,6 +882,16 @@ ggplot(asilo_America_multi, aes(TIME_PERIOD, OBS_VALUE, fill = sex)) +
        y = "") + 
   scale_fill_discrete(name = "", labels = c("M", "H")) +
   ggtitle("América - Asilo")
+
+# ENGLISH
+
+ggplot(asilo_America_multi, aes(TIME_PERIOD, OBS_VALUE, fill = sex)) +
+  geom_col() +
+  facet_wrap(vars(age_fator)) +
+  theme_classic() +
+  labs(x = "",
+       y = "") + 
+  scale_fill_discrete(name = "", labels = c("F", "M"))
 
 ####
 
@@ -921,6 +948,17 @@ ggplot(asilo_Magreb_multi, aes(TIME_PERIOD, OBS_VALUE, fill = sex)) +
        y = "") + 
   scale_fill_discrete(name = "", labels = c("M", "H")) +
   ggtitle("Magrebe - Asilo")
+
+#ENGLISH
+
+ggplot(asilo_Magreb_multi, aes(TIME_PERIOD, OBS_VALUE, fill = sex)) +
+  geom_col() +
+  facet_wrap(vars(age_fator)) +
+  theme_classic() +
+  labs(x = "",
+       y = "") + 
+  scale_fill_discrete(name = "", labels = c("F", "M"))
+
 
 #################### resettled ########################
 
@@ -1023,6 +1061,17 @@ ggplot(resettled_Africa_multi, aes(TIME_PERIOD, OBS_VALUE, fill = sex)) +
   scale_fill_discrete(name = "", labels = c("M", "H")) +
   ggtitle("África - Reassentamento")
 
+#ENGLISH
+
+ggplot(resettled_Africa_multi, aes(TIME_PERIOD, OBS_VALUE, fill = sex)) +
+  geom_col() +
+  facet_wrap(vars(age_fator)) +
+  theme_classic() +
+  labs(x = "",
+       y = "") + 
+  scale_fill_discrete(name = "", labels = c("F", "M"))
+
+
 ####
 
 resettled_Asia_multi <- resettled %>% 
@@ -1036,6 +1085,16 @@ ggplot(resettled_Asia_multi, aes(TIME_PERIOD, OBS_VALUE, fill = sex)) +
        y = "") + 
   scale_fill_discrete(name = "", labels = c("M", "H")) +
   ggtitle("Ásia - Reassentamento")
+
+#ENGLISH
+
+ggplot(resettled_Asia_multi, aes(TIME_PERIOD, OBS_VALUE, fill = sex)) +
+  geom_col() +
+  facet_wrap(vars(age_fator)) +
+  theme_classic() +
+  labs(x = "",
+       y = "") + 
+  scale_fill_discrete(name = "", labels = c("F", "M"))
 
 ####
 
